@@ -17,11 +17,11 @@ from model import (generate_model, load_pretrained_model, make_data_parallel,
                    get_fine_tuning_parameters)
 from mean import get_mean_std
 from spatial_transforms import (Compose, Normalize, Resize, CenterCrop,
-                                CornerCrop, MultiScaleCornerCrop,
+                                MultiScaleCornerCrop,
                                 RandomResizedCrop, RandomHorizontalFlip,
                                 ToTensor, ScaleValue, ColorJitter,
                                 PickFirstChannels)
-from temporal_transforms import (LoopPadding, TemporalRandomCrop,
+from temporal_transforms import (TemporalRandomCrop,
                                  TemporalCenterCrop, TemporalEvenCrop,
                                  SlidingWindow, TemporalSubsampling)
 from temporal_transforms import Compose as TemporalCompose
