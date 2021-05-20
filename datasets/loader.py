@@ -36,6 +36,7 @@ class VideoLoader(object):
             if image_path.exists():
                 video.append(self.image_loader(image_path))
 
+        # print(video)
         return video
 
 

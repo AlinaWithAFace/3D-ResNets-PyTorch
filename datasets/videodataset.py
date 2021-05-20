@@ -108,12 +108,14 @@ class VideoDataset(data.Dataset):
         return dataset, idx_to_class
 
     def __loading(self, path, frame_indices):
+        # print(path)
+        # print(frame_indices)
         clip = self.loader(path, frame_indices)
         if self.spatial_transform is not None:
             self.spatial_transform.randomize_parameters()
             clip = [self.spatial_transform(img) for img in clip]
         clip = torch.stack(clip, 0).permute(1, 0, 2, 3)
-
+        # print(clip)
         return clip
 
     def __getitem__(self, index):
