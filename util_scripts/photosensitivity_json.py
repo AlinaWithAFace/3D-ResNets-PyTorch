@@ -95,8 +95,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     label_csv_path = args.dir_path / 'labels.txt'
-    train_csv_path = args.dir_path / 'social-media-study-train.txt'
-    val_csv_path = args.dir_path / 'social-media-study-test.txt'
+    train_csv_path = args.dir_path / 'train.csv'
+    val_csv_path = args.dir_path / 'test.csv'
     dst_json_path = args.dst_path / 'photosensitivity_0.json'
 
     convert_photosensitivity_csv_to_json(label_csv_path, train_csv_path, val_csv_path, args.video_path, dst_json_path)
